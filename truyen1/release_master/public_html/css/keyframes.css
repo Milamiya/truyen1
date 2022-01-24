@@ -1,0 +1,175 @@
+#fillnav,
+#fillnav1,
+#fillnav2,
+#fillnav3,
+#fillnav4,
+#fillnav5,
+#fillnav6 {
+    z-index: 1501
+}
+
+.navop,
+#usrbox,
+#notify_nav {
+    z-index: 1502
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes opusr {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes clusr {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes opusr {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes clusr {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadecl {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opfd {
+    0% {
+        opacity: 0;
+        left: -300px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes clfd {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+    100% {
+        opacity: 0;
+        left: -300px;
+    }
+}
+
+@keyframes opfdn {
+    0% {
+        opacity: 0;
+        right: -350px;
+    }
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes clfdn {
+    0% {
+        opacity: 1;
+        right: 0px;
+    }
+    100% {
+        opacity: 0;
+        right: -350px;
+    }
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadecl {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes opfd {
+    0% {
+        opacity: 0;
+        left: -300px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@-webkit-keyframes clfd {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+    100% {
+        opacity: 0;
+        left: -300px;
+    }
+}
+
+@keyframes notexpendpp {
+    0% {
+        height: 80px;
+    }
+    100% {
+        height: 140px;
+    }
+}
+
+@keyframes notexpendzz {
+    100% {
+        height: 80px;
+    }
+    0% {
+        height: 140px;
+    }
+}

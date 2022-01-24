@@ -1,0 +1,131 @@
+#File lỗi
+ErrorDocument 404 /system/404.php
+ErrorDocument 403 /system/403.php
+ErrorDocument 500 /500.html
+# Bảo vệ file .htaccess
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files header.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files footer.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files meta.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files perm.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+#chạy rewrite
+RewriteEngine on
+RewriteRule ^roundcube/$ /index.php
+RewriteRule ^roundcube$ /index.php
+RewriteRule ^phpmyadmin/$ /index.php
+RewriteRule ^phpmyadmin$ /index.php
+
+RewriteRule ^home.aspx/$ /index.php
+RewriteRule ^home.aspx$ /index.php
+RewriteRule ^tao-tai-khoan.aspx/$ /user_action/signup.php
+RewriteRule ^tao-tai-khoan.aspx$ /user_action/signup.php
+Redirect /tao-tai-khoan /tao-tai-khoan.aspx
+RewriteRule ^dang-nhap/$ /user_action/log.php
+RewriteRule ^dang-nhap$ /user_action/log.php
+RewriteRule ^dang-xuat/$ /user_action/logout.php
+RewriteRule ^dang-xuat$ /user_action/logout.php
+RewriteRule ^cai-dat/$ /sys_urg/setting.php
+RewriteRule ^cai-dat$ /sys_urg/setting.php
+RewriteRule ^lich-su-dang-nhap/$ /sys_urg/user_log.php
+RewriteRule ^lich-su-dang-nhap$ /sys_urg/user_log.php
+Redirect /dang-tai/ /
+Redirect /dang-tai /
+
+RewriteRule ^phim$ /sys_urg/movies.php
+RewriteRule ^phim/$ /sys_urg/movies.php
+
+RewriteRule ^xem-phim/([a-zA-Z0-9_-]+).html/$ /sys_urg/loadmovie.php?slug=$1
+RewriteRule ^xem-phim/([a-zA-Z0-9_-]+).html$ /sys_urg/loadmovie.php?slug=$1
+
+RewriteRule ^noi-bat$ /sys_urg/trend.php
+RewriteRule ^noi-bat/$ /sys_urg/trend.php
+RewriteRule ^tim-kiem$ /sys_urg/search.php
+RewriteRule ^tim-kiem/$ /sys_urg/search.php
+RewriteRule ^about$ /sys_urg/about.php
+RewriteRule ^about/$ /sys_urg/about.php
+
+RewriteRule ^xem-video/([a-zA-Z0-9_-]+).html$ /sys_urg/watch.php?slug=$1
+RewriteRule ^xem-video/([a-zA-Z0-9_-]+).html/$ /sys_urg/watch.php?slug=$1
+
+RewriteRule ^xem-video/([a-zA-Z0-9_-]+).html/fullscreen$ /sys_urg/watch_full.php?slug=$1
+RewriteRule ^xem-video/([a-zA-Z0-9_-]+).html/fullscreen/$ /sys_urg/watch_full.php?slug=$1
+
+RewriteRule ^xem-video/khong-tim-thay-noi-dung$ /system/404.php
+RewriteRule ^xem-video/khong-tim-thay-noi-dung/$ /system/404.php
+RewriteRule ^dieu-khoan-su-dung/$ /sys_urg/privacy.php
+RewriteRule ^dieu-khoan-su-dung$ /sys_urg/privacy.php
+RewriteRule ^quen-mat-khau$ /user_action/forgot.php
+RewriteRule ^quen-mat-khau/$ /user_action/forgot.php
+RewriteRule ^video-da-thich/$ /sys_urg/like.php
+RewriteRule ^video-da-thich$ /sys_urg/like.php
+
+RewriteRule ^nguoi-dung/zid/([a-zA-Z0-9_-]+)$ /sys_urg/profiles.php?id=$1
+RewriteRule ^nguoi-dung/zid/([a-zA-Z0-9_-]+)/$ /sys_urg/profiles.php?id=$1
+
+RewriteRule ^@([a-zA-Z0-9_-]+)/$ /sys_urg/profiles.php?profile=$1
+RewriteRule ^@([a-zA-Z0-9_-]+)$ /sys_urg/profiles.php?profile=$1
+
+RewriteRule ^/zutafs/user/notify/ajax/clear/([a-zA-Z0-9_-]+)$ /system/ajax/clear_all_notify.php?token=$1
+RewriteRule ^/zutafs/user/notify/ajax/clear/([a-zA-Z0-9_-]+)/$ /system/ajax/clear_all_notify.php?token=$1
+
+RewriteRule ^/zutafs/user/notify/ajax/clear/u/([a-zA-Z0-9_-]+)/$ /system/ajax/clear_user_notify.php
+RewriteRule ^/zutafs/user/notify/ajax/clear/u/([a-zA-Z0-9_-]+)/$ /system/ajax/clear_user_notify.php
+#Main Directory Index File
+DirectoryIndex index.php index.html index.htm index2.html
+# DISABLE CACHING
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
+<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+    <IfModule mod_headers.c>
+        FileETag None
+        Header unset ETag
+        Header unset Pragma
+        Header unset Cache-Control
+        Header unset Last-Modified
+        Header set Pragma "no-cache"
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+# Protections  diverses (XSS, clickjacking and MIME-Type sniffing)
+<ifModule mod_headers.c>
+Header set X-XSS-Protection  "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options: "nosniff”
+</ifModule>
+#cache
+# cache images and flash content for one month
+    <FilesMatch “.(flv|gif|jpg|jpeg|png|ico|swf)$”>
+    Header set Cache-Control “max-age=2592000”
+    </FilesMatch>
+# cache text, css, and javascript files for one week
+    <FilesMatch “.(js|css|pdf|txt)$”>
+    Header set Cache-Control “max-age=604800”
+    </FilesMatch>
+

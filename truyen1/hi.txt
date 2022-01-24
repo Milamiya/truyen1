@@ -1,0 +1,16 @@
+Source Code sử dụng PHP thuần , chuẩn load image thì sử dụng lazyload để giảm thời gian load trang và đã tối ưu seo .
++ Data: Đầu truyện đc leech về lưu ở database để load trang cho nhanh, khi xem nội dung thì sẽ load trực tiếp chương web gốc update bạn cũng sẽ được update không cần phải leech chương -> xem demo sẽ rõ.
++ Database hiện tại là mới nhất khoảng hơn 10 ngàn đầu truyện.
++ Responsive thì vô tư trên mọi thiết bị.
++ Còn chức năng khác thì các bác xem demo sẽ rõ .
+– Sử dụng template Back-End (metronic)
+Hướng Dẫn Sử Dụng Code :
+Tải code rồi up lên hosting
+Sau khi up xong tìm và mở file /config.php
+Tìm dòng có dạng code  $conn = mysql_connect(‘localhost’, ‘root’, ‘pass’)
+Thay root bằng tên người dùng db . Thay pass bằng mật khẩu người dùng db .
+Tìm tiếp dòng mysql_select_db(‘test‘) or die(‘Could not select database’); 
+Thay test bằng tên db của hosting bạn
+Rồi tìm trong code có tệp truyen_2016_07_05_20_39.sql . Tải tệp đó về up lên phpmyadmin
+Tìm file /read.php thay dòng code foreach($html->find(‘div.chapter-content’) as $element) bằng dòng code này foreach($html->find(‘div.chapter-c’) as $element)
+Rồi còn vài thứ lặt vặt các bạn tự edit nhé

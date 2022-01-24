@@ -1,0 +1,62 @@
+/*FZTfansub - https://fztfansub.ga
+Developed by Nguyen Anh Duc
+CSS for iPhone 2G > 11
+*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) {.vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { .vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {.vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {.vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {.vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {.vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) {.vid000 img {height:15%;}}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {.vid000 img {height:15%;} }

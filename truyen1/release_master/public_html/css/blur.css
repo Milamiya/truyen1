@@ -1,0 +1,38 @@
+/*FZTfansub - Blur CSS
+Developed by Nguyen Anh Duc*/
+
+.header {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#fillnav,
+#fillnav1,
+#fillnav2,
+#fillnav3,
+#fillnav4 {
+    /*backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);*/
+}
+
+.navop,
+#notify_nav {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.usrbox {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#totop {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+
+/*.fill {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}*/

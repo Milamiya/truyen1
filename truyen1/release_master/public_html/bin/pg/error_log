@@ -1,0 +1,11 @@
+[26-Oct-2020 12:48:42 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'pgybseis_fztfs'@'localhost' (using password: YES) in /home/fztfansu/public_html/bin/pg/index.php on line 7
+[26-Oct-2020 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'pgybseis_fztfs'@'localhost' (using password: YES) in /home/fztfansu/public_html/bin/pg/index.php on line 7
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Notice:  Undefined variable: connn in /home/fztfansu/public_html/bin/pg/index.php on line 28
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/fztfansu/public_html/bin/pg/index.php on line 28
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Notice:  Undefined variable: connn in /home/fztfansu/public_html/bin/pg/index.php on line 29
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/fztfansu/public_html/bin/pg/index.php on line 29
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Notice:  Undefined variable: connn in /home/fztfansu/public_html/bin/pg/index.php on line 30
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/fztfansu/public_html/bin/pg/index.php on line 30
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/fztfansu/public_html/bin/pg/index.php on line 251
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/fztfansu/public_html/bin/pg/index.php on line 465
+[26-Oct-2020 12:57:52 Asia/Ho_Chi_Minh] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/fztfansu/public_html/bin/pg/index.php on line 487

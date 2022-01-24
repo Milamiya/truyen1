@@ -1,0 +1,68 @@
+@media (prefers-color-scheme: light) {
+    .header {
+        background-color: rgb(210 210 210 / 70%) !important;
+    }
+    body {
+        background-color: rgb(255 255 255) !important;
+        color: #131313 !important
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        color: #131313 !important
+    }
+    #notify_nav,
+    .usrbox,
+    .navop,
+    .main_title,
+    .type_vid,
+    #totop,
+    #msglg,
+    #network_status_dialog {
+        background-color: rgb(162 159 153 / 68%) !important
+    }
+    .nav_home {
+        background-color: rgb(200, 200, 200) !important
+    }
+    .nav_home .nav_content_button:hover {
+        background-color: rgb(167 167 167) !important
+    }
+    #fillnav,
+    #fillnav1,
+    #fillnav2,
+    #fillnav3,
+    #fillnav4,
+    #fillnav5,
+    #fillnav6 {
+        background-color: rgb(110 110 100 / 58%) !important
+    }
+    .viditem:hover,
+    .naimein .vid000:hover {
+        background-color: rgb(200, 200, 200) !important
+    }
+    #network_status {
+        background-color: #fff !important
+    }
+    .navset #mainip1,
+    .mainset .iptextarea,
+    .mainset #secl {
+        background-color: rgb(152 152 152) !important
+    }
+    .uset .profiles .usr-info a {
+        color: #fff !important
+    }
+    .uset .innerUploader {
+        color: #131313 !important
+    }
+    .usrbox .usrboxmain .usrname1 a {
+        color: #fff !important
+    }
+    .material-form-field label {
+        color: #3c3c3c !important
+    }
+}

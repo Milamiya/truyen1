@@ -1,0 +1,70 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #202020 !important
+    }
+    .card .header {
+        background-color: #404040 !important;
+        color: #fff !important;
+    }
+    .card .body {
+        background-color: #404040;
+        color: #fff !important
+    }
+    .card .header h2,
+    .card .header h1,
+    .card .header h4 {
+        color: #fff
+    }
+    .sidebar .menu {
+        background-color: #404040 !important;
+        color: #fff !important;
+    }
+    .sidebar .menu ul li a,
+    .sidebar .menu ul li a span {
+        color: #fff !important;
+    }
+    .sidebar .menu ul .active a span {
+        color: #f44336 !important
+    }
+    .sidebar .menu ul .header {
+        background-color: #505050 !important;
+        border: none
+    }
+    .sidebar .legal {
+        background-color: #505050 !important;
+        color: #fff !important;
+        border: none
+    }
+    .dropdown-menu {
+        background-color: #808080;
+        color: #fff !important
+    }
+    .dropdown-menu a {
+        color: #fff !important
+    }
+    .table-responsive {
+        border: none;
+    }
+    .table-responsive table tbody tr:hover {
+        background-color: #959595
+    }
+    .card .footer {
+        background-color: #404040
+    }
+    .page-loader-wrapper {
+        background-color: rgba(0, 0, 0, 0.726) !important;
+    }
+    .page-loader-wrapper p {
+        color: #fff !important;
+    }
+    #dark_auto_on {
+        display: block !important;
+        margin: 0px 0px 0px 10px !important;
+        font-size: 10px !important;
+        font-weight: bold !important;
+    }
+    .form-group .form-control {
+        background: #404040;
+        color: #fff;
+    }
+}

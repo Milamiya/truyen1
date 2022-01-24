@@ -1,0 +1,98 @@
+# Bảo vệ file .htaccess
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+#chạy rule rewrite
+RewriteEngine on
+#VIDEO
+RewriteRule ^phim$ /admin_main/movie.php
+RewriteRule ^phim/$ /admin_main/movie.php
+RewriteRule ^phim/new$ /admin_modify/new_movie.php
+RewriteRule ^phim/new/$ /admin_modify/new_movie.php
+RewriteRule ^phim/edit$ /admin_modify/edit_movie.php
+RewriteRule ^phim/edit/$ /admin_modify/edit_movie.php
+
+RewriteRule ^raw$ /admin_main/raw.php
+RewriteRule ^raw/$ /admin_main/raw.php
+
+RewriteRule ^video/$ /admin_main/video.php
+RewriteRule ^video$ /admin_main/video.php
+
+RewriteRule ^video/edit$ /admin_modify/edit_video.php
+RewriteRule ^video/edit/$ /admin_modify/edit_video.php
+RewriteRule ^video/new$ /admin_modify/new_video.php
+RewriteRule ^video/new/$ /admin_modify/new_video.php
+
+#SETTING
+RewriteRule ^cai-dat$ /admin_main/setting.php
+RewriteRule ^cai-dat/$ /admin_main/setting.php
+
+#USER
+RewriteRule ^user$ /admin_main/user.php
+RewriteRule ^user/$ /admin_main_main/user.php
+RewriteRule ^user/edit/$ /admin_main/useredit.php
+RewriteRule ^user/edit$ /admin_main/useredit.php
+
+#MEDIA 
+RewriteRule ^image$ /admin_main/image.php
+RewriteRule ^image/$ /admin_main_main/image.php
+
+#OTHER
+RewriteRule ^session$ /admin_main/session.php
+RewriteRule ^session$ /admin_main/session.php
+RewriteRule ^history$ /admin_main/log.php
+RewriteRule ^history$ /admin_main/log.php
+RewriteRule ^notify$ /admin_main/notify.php
+RewriteRule ^notify$ /admin_main/notify.php
+RewriteRule ^notify/me$ /admin_main/notify.php?mynotify
+RewriteRule ^notify/me/$ /admin_main/notify.php?mynotify
+RewriteRule ^notify/new$ /admin_modify/new_notify.php
+RewriteRule ^notify/new/$ /admin_modify/new_notify.php
+RewriteRule ^report$ /admin_main/report.php
+RewriteRule ^report$ /admin_main/report.php
+
+RewriteRule ^chat$ /chat_system/chat_index.php
+RewriteRule ^chat/$ /chat_system/chat_index.php
+#Main Directory Index File
+DirectoryIndex index.php index.html index.htm index2.html
+#fixing :))
+#DirectoryIndex fix.php index.php index.html index.htm index2.html
+# DISABLE CACHING
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
+<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+    <IfModule mod_headers.c>
+        FileETag None
+        Header unset ETag
+        Header unset Pragma
+        Header unset Cache-Control
+        Header unset Last-Modified
+        Header set Pragma "no-cache"
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+# Protections  diverses (XSS, clickjacking and MIME-Type sniffing)
+<ifModule mod_headers.c>
+Header set X-XSS-Protection  "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options: "nosniff”
+</ifModule>
+#cache
+# cache images and flash content for one month
+    <FilesMatch “.(flv|gif|jpg|jpeg|png|ico|swf)$”>
+    Header set Cache-Control “max-age=2592000”
+    </FilesMatch>
+# cache text, css, and javascript files for one week
+    <FilesMatch “.(js|css|pdf|txt)$”>
+    Header set Cache-Control “max-age=604800”
+    </FilesMatch>
+    
+    Redirect /login.php /
